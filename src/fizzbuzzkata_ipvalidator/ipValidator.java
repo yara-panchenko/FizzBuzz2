@@ -1,4 +1,5 @@
 package fizzbuzzkata_ipvalidator;
+import java.util.Arrays;
 
 public class ipValidator {
 
@@ -11,5 +12,8 @@ public class ipValidator {
 
 	private boolean hasThreeDots(String ipString) {
 		return ipString.chars().filter(c->c=='.').count()==3;
+	}
+	public int[] getNumbers(String string) {
+		return Arrays.stream( string.split("\\.")).mapToInt(Integer::parseInt).toArray();
 	}
 }

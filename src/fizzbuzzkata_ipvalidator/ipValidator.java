@@ -7,10 +7,14 @@ public class ipValidator {
 		if(hasThreeDots(ipString) && 
 				hasFourNumbers(ipString) &&
 				numbersInRange(ipString) &&
-				firstNumberInRange1_254(ipString)) {
+				firstNumberInRange1_254(ipString) &&
+				lastNumberInRange1_254(ipString)) {
 			return true;
 		}
 		return false;
+	}
+	private boolean lastNumberInRange1_254(String ipString) {
+		return getNumbers(ipString)[3]>0 && getNumbers(ipString)[3]<255;
 	}
 	private boolean firstNumberInRange1_254(String ipString) {
 		return getNumbers(ipString)[0]>0 && getNumbers(ipString)[0]<255;

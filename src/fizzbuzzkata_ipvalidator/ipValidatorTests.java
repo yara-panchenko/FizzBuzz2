@@ -30,11 +30,16 @@ class ipValidatorTests {
 	}
 	@Test
 	void ShouldBe_False_GivenStringWithFourNumbersNotInRange0_255(){
-		IpValidator validator = new IpValidator();
+		ipValidator validator = new ipValidator();
 		assertFalse(validator.ValidateIpv4Address("1.2.3.257"));
 		assertFalse(validator.ValidateIpv4Address("1.2.300.4"));
 		assertFalse(validator.ValidateIpv4Address("1.256.3.4"));
 		assertFalse(validator.ValidateIpv4Address("312.2.3.4"));
+	}
+	@Test
+	void ShouldBe_False_GivenIPstartingWithZero() {
+		ipValidator validator= new ipValidator();
+		assertFalse(validator.ValidateIpv4Address("0.2.3.4"));
 	}
 
 }

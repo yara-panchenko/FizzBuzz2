@@ -19,9 +19,14 @@ class ipValidatorTests {
 	}
 	@Test
 	void ShouldReturnFourNumbersGivenStringWithThreeDots() {
-		IpValidator validator = new IpValidator();
+		ipValidator validator = new ipValidator();
 		int[] expected = {1,2,3,4};
 		assertArrayEquals(expected,validator.getNumbers("1.2.3.4"));
+	}
+	@Test
+	void ShouldBe_False_GivenStringWithThreeNumbersAndDots() {
+		ipValidator validator = new ipValidator();
+		assertFalse(validator.ValidateIpv4Address("1.2.3."));
 	}
 
 }

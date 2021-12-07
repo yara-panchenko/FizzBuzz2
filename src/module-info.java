@@ -1,2 +1,0 @@
-module fizzbuzzkata_ipvalidator {
-}

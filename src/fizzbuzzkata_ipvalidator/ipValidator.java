@@ -1,7 +1,7 @@
 package fizzbuzzkata_ipvalidator;
 import java.util.Arrays;
 
-public class ipValidator {
+public class IpValidator {
 
 	public Boolean ValidateIpv4Address(String ipString) {
 		if(hasThreeDots(ipString) && 

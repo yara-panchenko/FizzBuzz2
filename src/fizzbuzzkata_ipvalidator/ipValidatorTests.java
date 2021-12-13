@@ -1,9 +1,5 @@
 package fizzbuzzkata_ipvalidator;
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +17,6 @@ class ipValidatorTests {
 	
 	@Test
 	void ShouldBe_False_GivenStringWithOutThreeDots() {
-		IpValidator validator = new IpValidator();
 		assertFalse(validator.ValidateIpv4Address(".."));
 		assertFalse(validator.ValidateIpv4Address("...."));
 	}

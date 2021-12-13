@@ -1,7 +1,13 @@
 package fizzbuzzkata_ipvalidator;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
+
 class ipValidatorTests {
+	IpValidator validator = new IpValidator();
+	@Before public void setup() {
+		IpValidator validator = new IpValidator();
+	}
 	@Test
 	void ShouldReturnFalse_GivenEmptyStringParameter() {
 		IpValidator validator = new IpValidator();

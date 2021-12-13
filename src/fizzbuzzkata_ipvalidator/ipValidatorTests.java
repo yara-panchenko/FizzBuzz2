@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class ipValidatorTests {
 	IpValidator validator = new IpValidator();
-	@Before public void setup() {
+	@Before public void setup() {		
 		assertFalse(validator.ValidateIpv4Address(""));
 		int[] expected = {};
 		assertArrayEquals(expected,validator.getNumbers(""));
